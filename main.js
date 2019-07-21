@@ -39,7 +39,7 @@ Ex: addKeyPowerIndex(arrOfObj2)
 */
 
 function addKeyPowerIndex() {
-  // WRITE YOUR CODE UNDER THIS LINE  
+ 
 
 }
 
@@ -64,8 +64,10 @@ Ex: decreseBy(arrOfNum1,-6)
 => [83, 11, 39]
 */
 
-function decreseBy() {
-  // WRITE YOUR CODE UNDER THIS LINE 
+function decreseBy(arr,num) {
+  var result = [];
+  result = arr.map(x=> x-num);
+  return result
 
 }
 
@@ -102,9 +104,13 @@ Ex: nameLongerThan(arrOfObj4,6)
 ]
 */
 
-function nameLongerThan() {
-  // WRITE YOUR CODE UNDER THIS LINE         
+function nameLongerThan(arr,num) {
+ 
+  var result = arr.filter(x => x.name.length > num);
+  return result
+  
 }
+//we will need to go inside the object and count the length of it then compare it to the number to return it using filter
 
 
 
@@ -133,9 +139,12 @@ Ex: avgLength(arrOfObj4,"food")
 => 6.8
 */
 
-function avgLength() {
-  // WRITE YOUR CODE UNDER THIS LINE         
+function avgLength(arr,str) {
+var result = arr.reduce (function (total, value){
+  return  total+ (value.name.length)
 
+},0 )
+return result/arr.length
 }
 
 // Good luck :)
